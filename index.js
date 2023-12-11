@@ -86,15 +86,59 @@ var finances = [
     ['Jan-2017', 138230],
     ['Feb-2017', 671099],
   ];
-  
-// Initialize variables
-var totalMonths = finances.length;
-var totalProfits = 0;
-var averageChange = 0;
-var greatestIncrease = 0;
-var greatestDecrease = 0;
 
-// total no of months
+//   initialize variables
+
+  var change = 0;
+  var current = 0;
+  var average = 0;
+  var increase =0;
+  var decrease = 0;
+  var totalChange = 0;
   
-var totalMonths = finances.length;
-console.log("Total Months: " + totalMonths);
+  
+  // total no of months
+  
+  var totalMonths = finances.length;
+  console.log("Total Months: " + totalMonths);
+  
+  //net total amount of profit/loss
+  //loop through array
+  //will start counting from first month onwards and sum together
+  
+  var netProfit = finances[0][1];  
+  var previous = netProfit;
+  
+  for(let i =1; i < finances.length; i++){
+    netProfit = netProfit + finances[i][1];
+    // console.log(netProfit);
+    console.log(finances[i][1],previous);
+  
+    change = finances[i][1] - previous;
+    console.log(change);
+    if(increase > change){
+    var greatestIncrease = increase;
+    }else{
+      increase = change;
+    }
+  //  decrease = change;
+    // console.log(change);
+    totalChange = totalChange + change;
+    previous = finances[i][1];
+    // console.log(previous);
+    if (decrease < change){
+      var greatestDecrease = decrease;
+    }else {
+      decrease = change;
+    }
+  }
+  
+  
+  average = totalChange / (finances.length -1);
+  console.log("Total : $" + netProfit);
+  console.log("Average Change " + Math.round((average * 100))/100);
+  console.log("Greatest Increase " + greatestIncrease);
+  console.log("Greatest Decrease " + greatestDecrease);
+  
+  
+  
