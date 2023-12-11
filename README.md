@@ -1,3 +1,8 @@
+# Links of Live URL and Github
+https://rashid-subhani.github.io/capital-sync-financial/
+https://github.com/rashid-subhani/capital-sync-financial
+
+
 # capital-sync-financial
 This is a cutting-edge financial company committed to revolutionizing the way businesses manage the finances.
 
@@ -21,3 +26,8 @@ After looping through all the months, divide the total change in profits by the 
 # Display Results:
 
 Finally the results, including the total number of months, net total profits, average change in profits, and details of the greatest increase and decrease.
+
+
+screenshot link:
+![Alt text](challenge_4.png)
+![Alt text](challenge4.PNG)
